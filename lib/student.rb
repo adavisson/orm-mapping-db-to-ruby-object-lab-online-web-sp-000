@@ -20,7 +20,7 @@ class Student
     # return a new instance of the Student class
     
     sql = <<-SQL
-      SELECT * FROM sudents WHERE name = ?
+      SELECT * FROM students WHERE name = ?
       SQL
     self.new_from_db(DB[:conn].execute(sql,name))
   end
